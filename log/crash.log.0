@@ -1,0 +1,263 @@
+2019-12-17 13:03:21 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.GenRMQ.Publisher:init/1
+    pid: <0.379.0>
+    registered_name: []
+    exception error: {undef,[{'Elixir.AMQP.Queue',declare,[#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.386.0>},pid => <0.395.0>},<<"hn_analytics">>,topic,[{durable,true}]],[]},{'Elixir.ElixirPopularity.RMQPublisher',create_rmq_resources,0,[{file,"lib/rmq_publisher.ex"},{line,43}]},{'Elixir.ElixirPopularity.RMQPublisher',init,0,[{file,"lib/rmq_publisher.ex"},{line,11}]},{'Elixir.GenRMQ.Publisher',init,1,[{file,"lib/publisher.ex"},{line,211}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.ElixirPopularity.Supervisor',<0.363.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.364.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 51604
+  neighbours:
+2019-12-17 13:03:21 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ElixirPopularity.Supervisor'}
+     Context:    start_error
+     Reason:     {undef,[{'Elixir.AMQP.Queue',declare,[#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.386.0>},pid => <0.395.0>},<<"hn_analytics">>,topic,[{durable,true}]],[]},{'Elixir.ElixirPopularity.RMQPublisher',create_rmq_resources,0,[{file,"lib/rmq_publisher.ex"},{line,43}]},{'Elixir.ElixirPopularity.RMQPublisher',init,0,[{file,"lib/rmq_publisher.ex"},{line,11}]},{'Elixir.GenRMQ.Publisher',init,1,[{file,"lib/publisher.ex"},{line,211}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.ElixirPopularity.RMQPublisher'},{mfargs,{'Elixir.ElixirPopularity.RMQPublisher',start_link,[]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2019-12-17 13:03:21 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.362.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.ElixirPopularity.RMQPublisher',{undef,[{'Elixir.AMQP.Queue',declare,[#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.386.0>},pid => <0.395.0>},<<"hn_analytics">>,topic,[{durable,true}]],[]},{'Elixir.ElixirPopularity.RMQPublisher',create_rmq_resources,0,[{file,"lib/rmq_publisher.ex"},{line,43}]},{'Elixir.ElixirPopularity.RMQPublisher',init,0,[{file,"lib/rmq_publisher.ex"},{line,11}]},{'Elixir.GenRMQ.Publisher',init,1,[{file,"lib/publisher.ex"},{line,211}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}},{'Elixir.ElixirPopularity.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.361.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.363.0>,normal}]
+    links: [<0.361.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 228
+  neighbours:
+2019-12-17 14:13:46 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:Elixir.Supervisor.Default/1
+    pid: <0.365.0>
+    registered_name: []
+    exception exit: {{start_spec,{invalid_restart_type,transistent}},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,358}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.364.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.364.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 302
+  neighbours:
+2019-12-17 14:13:46 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.363.0>
+    registered_name: []
+    exception exit: {{{start_spec,{invalid_restart_type,transistent}},{'Elixir.ElixirPopularity.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.362.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.364.0>,normal}]
+    links: [<0.362.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 210
+  neighbours:
+2019-12-17 14:14:04 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:Elixir.Supervisor.Default/1
+    pid: <0.359.0>
+    registered_name: []
+    exception exit: {{start_spec,{invalid_restart_type,tranistent}},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,358}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.358.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.358.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 302
+  neighbours:
+2019-12-17 14:14:04 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.357.0>
+    registered_name: []
+    exception exit: {{{start_spec,{invalid_restart_type,tranistent}},{'Elixir.ElixirPopularity.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.356.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.358.0>,normal}]
+    links: [<0.356.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 210
+  neighbours:
+2019-12-17 14:55:30 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.363.0>
+    registered_name: []
+    exception exit: {{bad_return,{{'Elixir.ElixirPopularity.Application',start,[normal,[]]},{'EXIT',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"The module ElixirPopulatiry.HackernewsIdProcessor was given as a child to a supervisor but it does not exist.">>},[{'Elixir.Supervisor',init_child,1,[{file,"lib/supervisor.ex"},{line,629}]},{'Elixir.Enum','-map/2-lists^map/1-0-',2,[{file,"lib/enum.ex"},{line,1336}]},{'Elixir.Enum','-map/2-lists^map/1-0-',2,[{file,"lib/enum.ex"},{line,1336}]},{'Elixir.Supervisor',init,2,[{file,"lib/supervisor.ex"},{line,615}]},{'Elixir.Supervisor',start_link,2,[{file,"lib/supervisor.ex"},{line,564}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,277}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.362.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.364.0>,normal}]
+    links: [<0.362.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 240
+  neighbours:
+2019-12-17 14:56:03 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ElixirPopularity.Supervisor'}
+     Context:    start_error
+     Reason:     {'EXIT',{undef,[{'Elixir.RMQPublisher',item_id_queue_name,[],[]},{'Elixir.ElixirPopularity.HackernewsIdProcessor',start_link,1,[{file,"lib/hacker_news_id_processor.ex"},{line,14}]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]}]}}
+     Offender:   [{pid,undefined},{id,'Elixir.ElixirPopularity.HackernewsIdProcessor'},{mfargs,{'Elixir.ElixirPopularity.HackernewsIdProcessor',start_link,[[]]}},{restart_type,permanent},{shutdown,infinity},{child_type,worker}]
+
+2019-12-17 14:56:03 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.357.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.ElixirPopularity.HackernewsIdProcessor',{'EXIT',{undef,[{'Elixir.RMQPublisher',item_id_queue_name,[],[]},{'Elixir.ElixirPopularity.HackernewsIdProcessor',start_link,1,[{file,"lib/hacker_news_id_processor.ex"},{line,14}]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]}]}}}},{'Elixir.ElixirPopularity.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.356.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.358.0>,normal}]
+    links: [<0.356.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 250
+  neighbours:
+2019-12-17 16:35:28 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ElixirPopularity.Supervisor'}
+     Context:    start_error
+     Reason:     {'EXIT',{undef,[{'Elixir.ElixirPopulariry.RMQPublisher',bulk_item_data_queue_name,[],[]},{'Elixir.ElixirPopularity.HackernewsPayloadProcessor',start_link,1,[{file,"lib/hackernews_payload_processor.ex"},{line,14}]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]}]}}
+     Offender:   [{pid,undefined},{id,'Elixir.ElixirPopularity.HackernewsPayloadProcessor'},{mfargs,{'Elixir.ElixirPopularity.HackernewsPayloadProcessor',start_link,[[]]}},{restart_type,permanent},{shutdown,infinity},{child_type,worker}]
+
+2019-12-17 16:35:29 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.368.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.ElixirPopularity.HackernewsPayloadProcessor',{'EXIT',{undef,[{'Elixir.ElixirPopulariry.RMQPublisher',bulk_item_data_queue_name,[],[]},{'Elixir.ElixirPopularity.HackernewsPayloadProcessor',start_link,1,[{file,"lib/hackernews_payload_processor.ex"},{line,14}]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]}]}}}},{'Elixir.ElixirPopularity.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.367.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.369.0>,normal}]
+    links: [<0.367.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 251
+  neighbours:
+2019-12-17 16:36:09 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ElixirPopularity.Supervisor'}
+     Context:    start_error
+     Reason:     {'EXIT',{undef,[{'Elixir.ElixirPopulariry.RMQPublisher',bulk_item_data_queue_name,[],[]},{'Elixir.ElixirPopularity.HackernewsPayloadProcessor',start_link,1,[{file,"lib/hackernews_payload_processor.ex"},{line,14}]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]}]}}
+     Offender:   [{pid,undefined},{id,'Elixir.ElixirPopularity.HackernewsPayloadProcessor'},{mfargs,{'Elixir.ElixirPopularity.HackernewsPayloadProcessor',start_link,[[]]}},{restart_type,permanent},{shutdown,infinity},{child_type,worker}]
+
+2019-12-17 16:36:09 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.357.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.ElixirPopularity.HackernewsPayloadProcessor',{'EXIT',{undef,[{'Elixir.ElixirPopulariry.RMQPublisher',bulk_item_data_queue_name,[],[]},{'Elixir.ElixirPopularity.HackernewsPayloadProcessor',start_link,1,[{file,"lib/hackernews_payload_processor.ex"},{line,14}]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]}]}}}},{'Elixir.ElixirPopularity.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.356.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.358.0>,normal}]
+    links: [<0.356.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 251
+  neighbours:
+2019-12-17 16:36:40 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ElixirPopularity.HackernewsPayloadProcessor.Broadway.ProducerSupervisor'}
+     Context:    start_error
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"invalid options given to BroadwayRabbitMQ.AmqpClient.init/1, Unsupported options [:connecion] for \"Broadway\"">>},[{'Elixir.BroadwayRabbitMQ.Producer',init,1,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,162}]},{'Elixir.Broadway.Producer',init,1,[{file,"lib/broadway/producer.ex"},{line,40}]},{'Elixir.GenStage',init,1,[{file,"lib/gen_stage.ex"},{line,1704}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.ElixirPopularity.HackernewsPayloadProcessor.Broadway.Producer_default_1'},{mfargs,{'Elixir.Broadway.Producer',start_link,[[{module,{'Elixir.BroadwayRabbitMQ.Producer',[{queue,<<"bulk_item_data">>},{connecion,[{username,<<"rabbitmq">>},{password,<<"rabbitmq">>}]}]}},{stages,1},{transformer,nil}],[{name,'Elixir.ElixirPopularity.HackernewsPayloadProcessor.Broadway.Producer_default_1'}]]}},{restart_type,permanent},{shutdown,30000},{child_type,worker}]
+
+2019-12-17 16:36:40 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.GenStage:init/1
+    pid: <0.494.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"invalid options given to BroadwayRabbitMQ.AmqpClient.init/1, Unsupported options [:connecion] for \"Broadway\"">>},[{'Elixir.BroadwayRabbitMQ.Producer',init,1,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,162}]},{'Elixir.Broadway.Producer',init,1,[{file,"lib/broadway/producer.ex"},{line,40}]},{'Elixir.GenStage',init,1,[{file,"lib/gen_stage.ex"},{line,1704}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.ElixirPopularity.HackernewsPayloadProcessor.Broadway.ProducerSupervisor','Elixir.ElixirPopularity.HackernewsPayloadProcessor.Broadway.Supervisor','Elixir.ElixirPopularity.HackernewsPayloadProcessor','Elixir.ElixirPopularity.Supervisor',<0.358.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.493.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 706
+  neighbours:
+2019-12-17 16:36:40 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ElixirPopularity.HackernewsPayloadProcessor.Broadway.Supervisor'}
+     Context:    start_error
+     Reason:     {shutdown,{failed_to_start_child,'Elixir.ElixirPopularity.HackernewsPayloadProcessor.Broadway.Producer_default_1',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"invalid options given to BroadwayRabbitMQ.AmqpClient.init/1, Unsupported options [:connecion] for \"Broadway\"">>},[{'Elixir.BroadwayRabbitMQ.Producer',init,1,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,162}]},{'Elixir.Broadway.Producer',init,1,[{file,"lib/broadway/producer.ex"},{line,40}]},{'Elixir.GenStage',init,1,[{file,"lib/gen_stage.ex"},{line,1704}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}}
+     Offender:   [{pid,undefined},{id,#Ref<0.1324558513.2859466753.39434>},{mfargs,{'Elixir.Supervisor',start_link,[[#{id => 'Elixir.ElixirPopularity.HackernewsPayloadProcessor.Broadway.Producer_default_1',shutdown => 30000,start => {'Elixir.Broadway.Producer',start_link,[[{module,{'Elixir.BroadwayRabbitMQ.Producer',[{queue,<<"bulk_item_data">>},{connecion,[{username,<<"rabbitmq">>},{password,<<"rabbitmq">>}]}]}},{stages,1},{transformer,nil}],[{name,'Elixir.ElixirPopularity.HackernewsPayloadProcessor.Broadway.Producer_default_1'}]]}}],[{name,'Elixir.ElixirPopularity.HackernewsPayloadProcessor.Broadway.ProducerSupervisor'},{strategy,one_for_one},{max_restarts,2},{max_seconds,1}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2019-12-17 16:36:40 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Broadway.Server:init/1
+    pid: <0.491.0>
+    registered_name: []
+    exception error: {{badmatch,{error,{shutdown,{failed_to_start_child,#Ref<0.1324558513.2859466753.39434>,{shutdown,{failed_to_start_child,'Elixir.ElixirPopularity.HackernewsPayloadProcessor.Broadway.Producer_default_1',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"invalid options given to BroadwayRabbitMQ.AmqpClient.init/1, Unsupported options [:connecion] for \"Broadway\"">>},[{'Elixir.BroadwayRabbitMQ.Producer',init,1,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,162}]},{'Elixir.Broadway.Producer',init,1,[{file,"lib/broadway/producer.ex"},{line,40}]},{'Elixir.GenStage',init,1,[{file,"lib/gen_stage.ex"},{line,1704}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}}}}}},[{'Elixir.Broadway.Server',init,1,[{file,"lib/broadway/server.ex"},{line,16}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.ElixirPopularity.Supervisor',<0.358.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.492.0>,{shutdown,{failed_to_start_child,#Ref<0.1324558513.2859466753.39434>,{shutdown,{failed_to_start_child,'Elixir.ElixirPopularity.HackernewsPayloadProcessor.Broadway.Producer_default_1',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"invalid options given to BroadwayRabbitMQ.AmqpClient.init/1, Unsupported options [:connecion] for \"Broadway\"">>},[{'Elixir.BroadwayRabbitMQ.Producer',init,1,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,162}]},{'Elixir.Broadway.Producer',init,1,[{file,"lib/broadway/producer.ex"},{line,40}]},{'Elixir.GenStage',init,1,[{file,"lib/gen_stage.ex"},{line,1704}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}}}}}]
+    links: [<0.359.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 1361
+  neighbours:
+2019-12-17 16:36:40 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.ElixirPopularity.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,{shutdown,{failed_to_start_child,#Ref<0.1324558513.2859466753.39434>,{shutdown,{failed_to_start_child,'Elixir.ElixirPopularity.HackernewsPayloadProcessor.Broadway.Producer_default_1',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"invalid options given to BroadwayRabbitMQ.AmqpClient.init/1, Unsupported options [:connecion] for \"Broadway\"">>},[{'Elixir.BroadwayRabbitMQ.Producer',init,1,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,162}]},{'Elixir.Broadway.Producer',init,1,[{file,"lib/broadway/producer.ex"},{line,40}]},{'Elixir.GenStage',init,1,[{file,"lib/gen_stage.ex"},{line,1704}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}}}}}},[{'Elixir.Broadway.Server',init,1,[{file,"lib/broadway/server.ex"},{line,16}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.ElixirPopularity.HackernewsPayloadProcessor'},{mfargs,{'Elixir.ElixirPopularity.HackernewsPayloadProcessor',start_link,[[]]}},{restart_type,permanent},{shutdown,infinity},{child_type,worker}]
+
+2019-12-17 16:36:41 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.357.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.ElixirPopularity.HackernewsPayloadProcessor',{{badmatch,{error,{shutdown,{failed_to_start_child,#Ref<0.1324558513.2859466753.39434>,{shutdown,{failed_to_start_child,'Elixir.ElixirPopularity.HackernewsPayloadProcessor.Broadway.Producer_default_1',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"invalid options given to BroadwayRabbitMQ.AmqpClient.init/1, Unsupported options [:connecion] for \"Broadway\"">>},[{'Elixir.BroadwayRabbitMQ.Producer',init,1,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,162}]},{'Elixir.Broadway.Producer',init,1,[{file,"lib/broadway/producer.ex"},{line,40}]},{'Elixir.GenStage',init,1,[{file,"lib/gen_stage.ex"},{line,1704}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}}}}}},[{'Elixir.Broadway.Server',init,1,[{file,"lib/broadway/server.ex"},{line,16}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}},{'Elixir.ElixirPopularity.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.356.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.358.0>,normal}]
+    links: [<0.356.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 184
+  neighbours:
